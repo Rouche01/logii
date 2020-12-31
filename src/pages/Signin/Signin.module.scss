@@ -1,0 +1,47 @@
+.mainContainer {
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sliderCol {
+    background-color: #111B54;
+    min-height: 100vh;
+}
+
+.formCol {
+    min-height: 100vh;
+    padding: 30px 120px;
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-top: 80px;
+        color: #000;
+    }
+}
+
+
+.loginForm {
+    margin-top: 35px;
+}
+
+.forgotPsw {
+    float: right;
+    clear: both;
+    font-weight: 600;
+    color: #111B54;
+    font-size: 16px;
+    margin-bottom: 14px;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.registerLink {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 11px;
+    a {
+        color: #111B54;
+    }
+}

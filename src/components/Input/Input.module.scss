@@ -1,0 +1,36 @@
+.mainWrapper {
+    margin-bottom: 17px;
+    label {
+        margin-bottom: 2px;
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 16px;
+    }
+}
+
+.inputContainer {
+    width: 100%;
+    input {
+        padding: 10px 50px;
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid rgba(0, 0, 0, 0.54);
+        font-size: 16px;
+        &:active {
+            border: 2px solid rgba(0, 122, 255, 0.5);
+        }
+        &:focus {
+            border: 2px solid rgba(0, 122, 255, 0.5);
+            outline: none;
+        }
+    }
+}
+
+.iconWrapper {
+    position: absolute;
+    padding: 10px 15px;
+    width: 50px;
+}
+
+.inputIcon {
+    margin-top: 5px;
+}
