@@ -13,7 +13,7 @@ const Input = ({ type, label, placeholder, nameAttr, changed, error, value, icon
           <FontAwesomeIcon icon={iconType} color={'rgba(0, 0, 0, 0.54)'} className={styles.inputIcon} />
         </span>
         <input type={type} placeholder={placeholder} name={nameAttr} className={styles.input} 
-          value={value} onChange={(val) => changed(val)}
+          value={value} onChange={(e) => changed(e.target.value)}
         />
       </div>
     </div>

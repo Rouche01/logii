@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
-import styles from './Signin.module.scss';
-import { Row, Col } from 'react-bootstrap';
-import Logo from '../../assets/Logo.png';
+import styles from './Signup.module.scss';
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/Logo.png';
+import pageUrl from '../../components/router/pageUrl';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
-import { faUnlockAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import Slider from 'react-slick';
-import pageUrl from '../../components/router/pageUrl';
+import Spacer from '../../components/Spacer/Spacer';
 import CustomSlide from '../../components/CustomSlide/CustomSlide';
+import Slider from 'react-slick';
+import { faUnlockAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Row, Col } from 'react-bootstrap';
 
-const Signin = () => {
+
+const Signup = () => {
 
   const [ email, setEmail ] = useState('');
   const [ password, setPassword ] = useState('');
+  const [ confirmPassword, setConfirmPassword ] = useState('');
 
   const onSubmit = () => {
-    console.log(email, password);
+    console.log(email, password, confirmPassword);
   }
 
   const settings = {
@@ -27,31 +30,34 @@ const Signin = () => {
     slidestoScroll: 1
   };
 
-  return(
+  return (
     <div className={styles.mainContainer}>
       <Row>
         <Col>
           <div className={styles.formCol}>
             <Link to={pageUrl.HOMEPAGE}><img className={styles.Logo} src={Logo} alt="Logii Logo" /></Link>
-            <h1>Login to your account</h1>
-            <div className={styles.loginForm}>
+            <h1>Get Started</h1>
+            <div className={styles.registerForm}>
               <Input type="text" label="Email Address" placeholder="Email Address" 
-                nameAttr="email" iconType={faEnvelope} value={email} changed={setEmail}
+                nameAttr="email" changed={setEmail} iconType={faEnvelope} value={email}
               />
               <Input type="password" label="Password" placeholder="Password" 
-                nameAttr="password" iconType={faUnlockAlt} value={password} changed={setPassword}
+                nameAttr="password" changed={setPassword} iconType={faUnlockAlt} value={password}
               />
-              <Link to='/' className={styles.forgotPsw}>Forgot Password?</Link>
-              <Button btnLabel="Sign In" width="100%" clicked={onSubmit} />
-              <p className={styles.registerLink}>Not Registered Yet? 
-                <Link to={pageUrl.REGISTER_PAGE}> Create An Account</Link>
-              </p>
+              <Input type="password" label="Confirm Password" placeholder="Confirm Password" 
+                nameAttr="confirmPassword" changed={setConfirmPassword} 
+                iconType={faUnlockAlt} value={confirmPassword}
+              />
+              <Spacer>
+                <Button width="100%" btnLabel="Sign Up" clicked={onSubmit} />
+              </Spacer>
+              <p className={styles.loginLink}>Have an Account? <Link to={pageUrl.LOGIN_PAGE}>Login</Link></p>
             </div>
-          </div>
-          <div className={styles.linkGroup}>
-            <Link to={pageUrl.HOMEPAGE}>Back to Website</Link>
-            <Link className={styles.faded} to={pageUrl.TERMS_OF_SERVICE}>Terms of Service</Link>
-            <Link className={styles.faded} to={pageUrl.PRIVACY_POLICY}>Privacy Policy</Link>
+            <div className={styles.linkGroup}>
+              <Link to={pageUrl.HOMEPAGE}>Back to Website</Link>
+              <Link className={styles.faded} to={pageUrl.TERMS_OF_SERVICE}>Terms of Service</Link>
+              <Link className={styles.faded} to={pageUrl.PRIVACY_POLICY}>Privacy Policy</Link>
+            </div>
           </div>
         </Col>
         <Col>
@@ -80,4 +86,4 @@ const Signin = () => {
 }
 
 
-export default Signin;
+export default Signup;

@@ -1,6 +1,6 @@
 .mainContainer {
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -8,20 +8,22 @@
     background-color: #111B54;
     min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 0 60px;
     h2 {
-        color: #fff;
-        text-align: center;
         font-size: 36px;
+        color: #fff;
         font-weight: 400;
+        text-align: center;
     }
 }
 
 .formCol {
     min-height: 100vh;
     padding: 30px 120px;
+    overflow-y: auto;
+    overflow-x: hidden;
     h1 {
         font-size: 36px;
         font-weight: 600;
@@ -30,29 +32,12 @@
     }
 }
 
-
-.loginForm {
-    margin-top: 35px;
-}
-
-.forgotPsw {
-    float: right;
-    clear: both;
-    font-weight: 600;
-    color: #111B54;
-    font-size: 16px;
-    margin-bottom: 14px;
-    &:hover {
-        text-decoration: none;
-        color: #4D8AF0;
-    }
-}
-
-.registerLink {
-    font-size: 14px;
+.loginLink {
     text-align: center;
-    margin-top: 11px;
+    margin-top: 15px;
+    color: rgba(0,0,0,0.54);
     a {
+        font-weight: 600;
         color: #111B54;
         &:hover {
             text-decoration: none;
@@ -60,6 +45,7 @@
         }
     }
 }
+
 
 .linkGroup {
     position: absolute;

@@ -12,4 +12,48 @@ code {
     monospace;
 }
 
+.slick-prev {
+  left: -45px !important;
+}
+
+.slick-next {
+  right: -45px !important;
+}
+
+.slick-prev:before {
+  display: block;
+  content: " " !important;
+  background-image: url('./assets/arrow-left.svg');
+  background-size: 15px 15px;
+  height: 15px;
+  width: 15px;
+}
+
+.slick-next:before {
+  display: block;
+  content: " " !important;
+  background-image: url('./assets/arrow-right.svg');
+  background-size: 15px 15px;
+  height: 15px;
+  width: 15px;
+}
+
+.slick-dots li.slick-active button:before {
+  background-image: url('./assets/active-indicator.svg');
+  opacity: 0.75;
+}
+
+.slick-dots li button:before {
+  content: "" !important;
+  background-image: url('./assets/dot-indicator.svg');
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  height: 10px;
+  width: 10px;
+  opacity: 0.75 !important;
+}
+
+.slick-dots {
+  bottom: -45px !important;
+}
 

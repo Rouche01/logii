@@ -5,6 +5,14 @@
     background-color: #111B54;
     color: #ffffff;
     border: 2px solid #111B54;
+    &:active {
+        outline: none;
+        border: 2px solid #111B54;
+    }
+    &:focus {
+        outline: none;
+        border: 2px solid #111B54;
+    }
 }   
 
 .widthHundred {
